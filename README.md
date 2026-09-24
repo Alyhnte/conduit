@@ -46,9 +46,8 @@ Clean-machine install, in order:
    (goldens were captured with 6.2.2; the comparator tolerates formatting
    drift between r2 versions). Must be on PATH as `radare2` or `r2`:
    `r2 -v`. Override the path with `DBG_BRIDGE_R2`.
-3. **Graphviz** — `dot` on PATH: `dot -V`.
-4. **Python 3** — only to regenerate or verify the example fixture:
-   `python --version`.
+3. **Graphviz** — `dot` on PATH (`dot -V`). Required to render a control-flow graph from `get_cfg`. x64dbg does not draw that graph itself.
+4. **Python 3.10+** — required for an `x64dbg` session. The loader embeds Python and the bridge needs `iced_x86` (`python -m pip install iced_x86`). 64-bit Python must be on PATH, or set `PYTHON_HOME_X64`. 32-bit Python is only for x86 targets (`PYTHON_HOME_X86` or `%USERPROFILE%\Tools\python-x86`). Regenerating the example fixture also uses Python 3. Details: `plugin/x64dbg/README.md`.
 
 `prerequisites` reports these programs plus x64dbg, cdb, Frida, and ScyllaHide.
 A missing program includes `indir` (a URL) and `nereye` (where to put it). Conduit

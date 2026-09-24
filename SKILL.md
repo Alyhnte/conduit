@@ -13,7 +13,7 @@ Conduit is an MCP server, not a subcommand CLI. Start it, then call tools.
 npm install -g github:Alyhnte/conduit
 ```
 
-Node.js 20 or newer and npm. Static tools need `radare2` on PATH. Live tools need x64dbg or cdb. The Frida engine is pulled by that npm install; it is not a separate download. Python is not required.
+Node.js 20 or newer and npm. Static tools need `radare2` on PATH. Rendering a control-flow graph needs Graphviz (`dot` on PATH). An `x64dbg` session needs portable x64dbg plus Python 3.10+ with `iced_x86` (`python -m pip install iced_x86`); 64-bit Python on PATH or `PYTHON_HOME_X64`. 32-bit Python is only for x86 targets. cdb is a separate Windows debugger. The Frida engine is pulled by the npm install. Python is not required to install Conduit itself.
 
 ## Run
 
