@@ -3,3 +3,6 @@ dist/
 *.tsbuildinfo
 __pycache__/
 *.pyc
+python/conduit_debugger/_payload/
+*.egg-info/
+build/

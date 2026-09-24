@@ -27,14 +27,15 @@ Static analysis and live debugging share one tool surface. `session_open` picks 
 
 ## Install
 
+Node.js 20 or newer must already be on PATH. Then:
+
 ```sh
-git clone https://github.com/Alyhnte/conduit.git
-cd conduit
-npm ci
-npm run build
+pip install conduit-debugger
 ```
 
-Node.js 20 or newer. `engines` in `package.json` enforces this.
+That puts the `conduit` command on PATH. The first launch installs the Node dependencies into your home directory. `conduit`, `conduit-mcp`, and `conduit-cli` are already taken on PyPI, so the package name is `conduit-debugger`.
+
+From a checkout, the same package installs with `pip install .`
 
 ## Prerequisites
 

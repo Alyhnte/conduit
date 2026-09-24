@@ -10,7 +10,7 @@ Conduit is an MCP server, not a subcommand CLI. Start it, then call tools.
 ## Install
 
 ```sh
-npm install -g github:Alyhnte/conduit
+pip install conduit-debugger
 ```
 
 Node.js 20 or newer. Static tools need `radare2` on PATH. Live tools need x64dbg, cdb, or the bundled Frida package.
