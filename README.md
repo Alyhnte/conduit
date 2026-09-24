@@ -1,10 +1,19 @@
 # Conduit
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D20-339933.svg)](package.json)
-[![MCP](https://img.shields.io/badge/MCP-2026--07--28-111111.svg)](https://modelcontextprotocol.io)
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2DD4BF?style=for-the-badge" alt="MIT license"></a>
+  <a href="package.json"><img src="https://img.shields.io/badge/node-%E2%89%A520-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js 20+"></a>
+  <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-2026--07--28-111111?style=for-the-badge" alt="MCP protocol"></a>
+  <img src="https://img.shields.io/badge/engines-radare2%20%7C%20x64dbg%20%7C%20cdb%20%7C%20Frida-F5A623?style=for-the-badge" alt="Debugger engines">
+</p>
 
 **Conduit** is an [MCP](https://modelcontextprotocol.io) debugger. One server connects Cursor, Claude, Cline, and any other MCP client to **radare2**, **x64dbg**, **cdb**, and **Frida** for disassembly, control-flow graphs, cross-references, strings, and live debugging.
+
+<p align="center">
+  <img src="assets/capability-coverage.png" alt="Debugger coverage rises from 4 percent before Conduit to 100 percent with Conduit, a gain of 96 points" width="920">
+</p>
+
+The bars score 12 debugger jobs. **Before** means a coding agent with a shell and no debugger tool: it can scrape strings or a hex dump, and it can narrate assembly only if someone pastes it. **With Conduit** means the same job returns from an MCP tool (`disassemble`, `get_cfg`, `xrefs`, `debug_*`, `explain`). Average coverage moves from **4%** to **100%** (**+96 points**). That is tool coverage, not a model-IQ benchmark. Strings, hex dump, and assembly reading stay above zero before Conduit because a shell or a pasted listing can still produce a partial answer.
 
 Static analysis and live debugging share one tool surface. `session_open` picks the engine. Nothing is stubbed: a tool the engine does not implement returns `capability_unsupported`.
 

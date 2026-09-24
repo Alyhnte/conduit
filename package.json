@@ -30,6 +30,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prepare": "tsc",
     "start": "node dist/server.js",
     "start:http": "node dist/server.js --transport http",
     "test": "node tests/run_golden.mjs",
