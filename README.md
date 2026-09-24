@@ -10,10 +10,10 @@
 **Conduit** is an [MCP](https://modelcontextprotocol.io) debugger. One server connects Cursor, Claude, Cline, and any other MCP client to **radare2**, **x64dbg**, **cdb**, and **Frida** for disassembly, control-flow graphs, cross-references, strings, and live debugging.
 
 <p align="center">
-  <img src="assets/capability-coverage.png" alt="Debugger coverage rises from 4 percent before Conduit to 100 percent with Conduit, a gain of 96 points" width="920">
+  <img src="assets/capability-coverage.png" alt="Engine support for debugger jobs. Fully supported average is 85 percent. Five live jobs are 67 percent because Frida does not implement them. Assembly reading is not measured." width="920">
 </p>
 
-The bars score 12 debugger jobs. **Before** means a coding agent with a shell and no debugger tool: it can scrape strings or a hex dump, and it can narrate assembly only if someone pastes it. **With Conduit** means the same job returns from an MCP tool (`disassemble`, `get_cfg`, `xrefs`, `debug_*`, `explain`). Average coverage moves from **4%** to **100%** (**+96 points**). That is tool coverage, not a model-IQ benchmark. Strings, hex dump, and assembly reading stay above zero before Conduit because a shell or a pasted listing can still produce a partial answer.
+The bars are engine support, not a success-rate benchmark. **100%** means every engine that job applies to implements it: static jobs on radare2, and live memory on x64dbg, cdb, and Frida. **67%** means x64dbg and cdb only. Frida does not step, pause, or take full breakpoints and thread control; its registers and call stack are the last hardware-breakpoint hit, not a live read. **Assembly reading** has an `explain` tool, and its accuracy was not measured. The gray “before” percents are an estimate of what a shell can do with no debugger tool, not a measured baseline.
 
 Static analysis and live debugging share one tool surface. `session_open` picks the engine. Nothing is stubbed: a tool the engine does not implement returns `capability_unsupported`.
 
