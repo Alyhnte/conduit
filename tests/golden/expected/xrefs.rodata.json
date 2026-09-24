@@ -1,0 +1,13 @@
+{
+  "address": "0x400300",
+  "to": [
+    {
+      "from": "0x400200",
+      "type": "DATA",
+      "opcode": "lea rax, str.HELLO_FIXTURE",
+      "function": "entry0",
+      "to": "str.HELLO_FIXTURE"
+    }
+  ],
+  "from": []
+}

@@ -1,0 +1,9 @@
+{
+  "mcp": {
+    "conduit": {
+      "type": "local",
+      "command": ["node", "<DBG_BRIDGE_DIR>/dist/server.js"],
+      "enabled": true
+    }
+  }
+}

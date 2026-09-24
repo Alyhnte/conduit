@@ -1,0 +1,9 @@
+{
+  "location": "entry0",
+  "function": {
+    "name": "entry0",
+    "address": "0x400200",
+    "size": 34,
+    "blocks": 4
+  }
+}

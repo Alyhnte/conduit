@@ -1,0 +1,80 @@
+{
+  "location": "entry0",
+  "count": 10,
+  "ops": [
+    {
+      "address": "0x400200",
+      "size": 7,
+      "bytes": "488d05f9000000",
+      "opcode": "lea rax, [rip + 0xf9]",
+      "type": "lea"
+    },
+    {
+      "address": "0x400207",
+      "size": 1,
+      "bytes": "55",
+      "opcode": "push rbp",
+      "type": "rpush"
+    },
+    {
+      "address": "0x400208",
+      "size": 3,
+      "bytes": "4889e5",
+      "opcode": "mov rbp, rsp",
+      "type": "mov"
+    },
+    {
+      "address": "0x40020b",
+      "size": 3,
+      "bytes": "83ff00",
+      "opcode": "cmp edi, 0",
+      "type": "cmp"
+    },
+    {
+      "address": "0x40020e",
+      "size": 2,
+      "bytes": "740b",
+      "opcode": "je 0x40021b",
+      "type": "cjmp",
+      "jump": "0x40021b",
+      "fail": "0x400210"
+    },
+    {
+      "address": "0x400210",
+      "size": 5,
+      "bytes": "b801000000",
+      "opcode": "mov eax, 1",
+      "type": "mov"
+    },
+    {
+      "address": "0x400215",
+      "size": 2,
+      "bytes": "eb09",
+      "opcode": "jmp 0x400220",
+      "type": "jmp",
+      "jump": "0x400220"
+    },
+    {
+      "address": "0x40021b",
+      "size": 5,
+      "bytes": "b802000000",
+      "opcode": "mov eax, 2",
+      "type": "mov"
+    },
+    {
+      "address": "0x400220",
+      "size": 1,
+      "bytes": "5d",
+      "opcode": "pop rbp",
+      "type": "pop"
+    },
+    {
+      "address": "0x400221",
+      "size": 1,
+      "bytes": "c3",
+      "opcode": "ret",
+      "type": "ret"
+    }
+  ],
+  "text": "0x400200  lea rax, [rip + 0xf9]\n0x400207  push rbp\n0x400208  mov rbp, rsp\n0x40020b  cmp edi, 0\n0x40020e  je 0x40021b\n0x400210  mov eax, 1\n0x400215  jmp 0x400220\n0x40021b  mov eax, 2\n0x400220  pop rbp\n0x400221  ret"
+}

@@ -1,0 +1,13 @@
+digraph code {
+	graph [fontsize=8 fontname="Courier" bgcolor=azure splines="ortho"];
+	node [fillcolor=white style=filled shape=box];
+	edge [arrowhead="normal"];
+	"0x00400200" [URL="entry0/0x00400200", fontcolor="#808080", fontname="Courier", label="  ;-- section..text:\l  ;-- segment.LOAD0:\l  ;-- rip:\l30: entry0 (int64_t arg1);\l`- args(rdi)\l0x00400200      lea rax, str.HELLO_FIXTURE                             ; segment.LOAD1\l                                                                       ; 0x400300 ; \"HELLO-FIXTURE\" ; [01] -r-x section size 34 named .text\l0x00400207      push rbp\l0x00400208      mov rbp, rsp\l0x0040020b      cmp edi, 0                                             ; arg1\l0x0040020e      je 0x40021b\l"]
+	"0x00400210" [URL="entry0/0x00400210", fontcolor="#808080", fontname="Courier", label="0x00400210      mov eax, 1\l0x00400215      jmp 0x400220\l"]
+	"0x0040021b" [URL="entry0/0x0040021b", fontcolor="#808080", fontname="Courier", label="0x0040021b      mov eax, 2\l"]
+	"0x00400220" [URL="entry0/0x00400220", fontcolor="#808080", fontname="Courier", label="; CODE XREF from entry0 @ 0x400215(x)\l0x00400220      pop rbp\l0x00400221      ret\l"]
+        "0x00400200" -> "0x0040021b" [color="#008000"];
+        "0x00400200" -> "0x00400210" [color="#800000"];
+        "0x00400210" -> "0x00400220" [color="#008080"];
+        "0x0040021b" -> "0x00400220" [color="#008080"];
+}

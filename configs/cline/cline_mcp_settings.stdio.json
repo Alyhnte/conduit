@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "conduit": {
+      "command": "node",
+      "args": ["<DBG_BRIDGE_DIR>/dist/server.js"]
+    }
+  }
+}

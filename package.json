@@ -1,0 +1,57 @@
+{
+  "name": "conduit",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MCP debugger for radare2, x64dbg, cdb, and Frida. Disassembly, CFG, xrefs, and live debugging over stdio or HTTP.",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "debugger",
+    "debugging",
+    "reverse-engineering",
+    "radare2",
+    "x64dbg",
+    "frida",
+    "disassembly",
+    "binary-analysis"
+  ],
+  "homepage": "https://github.com/Alyhnte/conduit#readme",
+  "bugs": {
+    "url": "https://github.com/Alyhnte/conduit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alyhnte/conduit.git"
+  },
+  "bin": {
+    "conduit": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "start:http": "node dist/server.js --transport http",
+    "test": "node tests/run_golden.mjs",
+    "test:debug": "node tests/debug_acceptance.mjs",
+    "test:cdb": "node tests/cdb_acceptance.mjs",
+    "test:frida": "node tests/frida_acceptance.mjs",
+    "test:dynamic": "node tests/dynamic_acceptance.mjs",
+    "test:explain": "node tests/explain_acceptance.mjs",
+    "test:concurrency": "node tests/concurrent_http.mjs",
+    "test:auth": "node tests/auth_http.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "frida": "^17.18.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
+  }
+}

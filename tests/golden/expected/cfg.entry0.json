@@ -1,0 +1,238 @@
+[
+  {
+    "name": "entry0",
+    "addr": 4194816,
+    "ninstr": 10,
+    "nargs": 1,
+    "nlocals": 0,
+    "size": 34,
+    "stack": 8,
+    "type": "fcn",
+    "blocks": [
+      {
+        "addr": 4194816,
+        "size": 16,
+        "jump": 4194843,
+        "fail": 4194832,
+        "ops": [
+          {
+            "addr": 4194816,
+            "ptr": 4195072,
+            "esil": "0xf9,rip,+,rax,=",
+            "refptr": 8,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194843,
+            "size": 7,
+            "opcode": "lea rax, [rip + 0xf9]",
+            "disasm": "lea rax, str.HELLO_FIXTURE",
+            "bytes": "488d05f9000000",
+            "family": "cpu",
+            "type": "lea",
+            "reloc": false,
+            "type_num": 33,
+            "type2_num": 0,
+            "flags": [
+              "entry0",
+              "section..text",
+              "segment.LOAD0",
+              "rip"
+            ],
+            "comment": "WzAxXSAtci14IHNlY3Rpb24gc2l6ZSAzNCBuYW1lZCAudGV4dA==",
+            "refs": [
+              {
+                "addr": 4195072,
+                "type": "DATA",
+                "perm": "r--"
+              }
+            ]
+          },
+          {
+            "addr": 4194823,
+            "esil": "rbp,8,rsp,-,=[8],8,rsp,-=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194849,
+            "size": 1,
+            "opcode": "push rbp",
+            "disasm": "push rbp",
+            "bytes": "55",
+            "family": "cpu",
+            "type": "rpush",
+            "reloc": false,
+            "type_num": 268435468,
+            "type2_num": 0
+          },
+          {
+            "addr": 4194824,
+            "esil": "rsp,rbp,=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194847,
+            "size": 3,
+            "opcode": "mov rbp, rsp",
+            "disasm": "mov rbp, rsp",
+            "bytes": "4889e5",
+            "family": "cpu",
+            "type": "mov",
+            "reloc": false,
+            "type_num": 9,
+            "type2_num": 0
+          },
+          {
+            "addr": 4194827,
+            "ptr": 0,
+            "val": 0,
+            "esil": "0,edi,==,$z,zf,:=,32,$b,cf,:=,$p,pf,:=,31,$s,sf,:=,0,0x80000000,-,!,31,$o,^,of,:=,4,$b,af,:=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194847,
+            "size": 3,
+            "opcode": "cmp edi, 0",
+            "disasm": "cmp edi, 0",
+            "bytes": "83ff00",
+            "family": "cpu",
+            "type": "cmp",
+            "reloc": false,
+            "type_num": 15,
+            "type2_num": 0
+          },
+          {
+            "addr": 4194830,
+            "esil": "zf,?{,4194843,rip,=,}",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194848,
+            "size": 2,
+            "opcode": "je 0x40021b",
+            "disasm": "je 0x40021b",
+            "bytes": "740b",
+            "family": "cpu",
+            "type": "cjmp",
+            "reloc": false,
+            "type_num": 2147483649,
+            "type2_num": 0,
+            "jump": 4194843,
+            "fail": 4194832
+          }
+        ]
+      },
+      {
+        "addr": 4194832,
+        "size": 7,
+        "jump": 4194848,
+        "ops": [
+          {
+            "addr": 4194832,
+            "val": 1,
+            "esil": "1,rax,=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194845,
+            "size": 5,
+            "opcode": "mov eax, 1",
+            "disasm": "mov eax, 1",
+            "bytes": "b801000000",
+            "family": "cpu",
+            "type": "mov",
+            "reloc": false,
+            "type_num": 9,
+            "type2_num": 0
+          },
+          {
+            "addr": 4194837,
+            "esil": "0x400220,rip,=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194848,
+            "size": 2,
+            "opcode": "jmp 0x400220",
+            "disasm": "jmp 0x400220",
+            "bytes": "eb09",
+            "family": "cpu",
+            "type": "jmp",
+            "reloc": false,
+            "type_num": 1,
+            "type2_num": 0,
+            "jump": 4194848,
+            "refs": [
+              {
+                "addr": 4194848,
+                "type": "CODE",
+                "perm": "--x"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "addr": 4194843,
+        "size": 5,
+        "jump": 4194848,
+        "ops": [
+          {
+            "addr": 4194843,
+            "val": 2,
+            "esil": "2,rax,=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194845,
+            "size": 5,
+            "opcode": "mov eax, 2",
+            "disasm": "mov eax, 2",
+            "bytes": "b802000000",
+            "family": "cpu",
+            "type": "mov",
+            "reloc": false,
+            "type_num": 9,
+            "type2_num": 0
+          }
+        ]
+      },
+      {
+        "addr": 4194848,
+        "size": 2,
+        "ops": [
+          {
+            "addr": 4194848,
+            "esil": "rsp,[8],8,rsp,+=,rbp,=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194849,
+            "size": 1,
+            "opcode": "pop rbp",
+            "disasm": "pop rbp",
+            "bytes": "5d",
+            "family": "cpu",
+            "type": "pop",
+            "reloc": false,
+            "type_num": 14,
+            "type2_num": 0,
+            "xrefs": [
+              {
+                "addr": 4194837,
+                "type": "CODE",
+                "perm": "--x"
+              }
+            ]
+          },
+          {
+            "addr": 4194849,
+            "esil": "rsp,[8],rip,=,8,rsp,+=",
+            "refptr": 0,
+            "fcn_addr": 4194816,
+            "fcn_last": 4194849,
+            "size": 1,
+            "opcode": "ret",
+            "disasm": "ret",
+            "bytes": "c3",
+            "family": "cpu",
+            "type": "ret",
+            "reloc": false,
+            "type_num": 5,
+            "type2_num": 0
+          }
+        ]
+      }
+    ]
+  }
+]

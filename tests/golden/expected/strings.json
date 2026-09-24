@@ -1,0 +1,22 @@
+{
+  "total": 2,
+  "offset": 0,
+  "strings": [
+    {
+      "vaddr": "0x400300",
+      "paddr": "0x300",
+      "section": ".rodata",
+      "type": "ascii",
+      "length": 13,
+      "string": "HELLO-FIXTURE"
+    },
+    {
+      "vaddr": "0x40030e",
+      "paddr": "0x30e",
+      "section": ".rodata",
+      "type": "ascii",
+      "length": 11,
+      "string": "mini-branch"
+    }
+  ]
+}
