@@ -27,15 +27,15 @@ Static analysis and live debugging share one tool surface. `session_open` picks 
 
 ## Install
 
-Node.js 20 or newer must already be on PATH. Then:
+Node.js 20 or newer and npm must already be on PATH. Then:
 
 ```sh
-pip install conduit-debugger
+npm install -g github:Alyhnte/conduit
 ```
 
-That puts the `conduit` command on PATH. The first launch installs the Node dependencies into your home directory. `conduit`, `conduit-mcp`, and `conduit-cli` are already taken on PyPI, so the package name is `conduit-debugger`.
+That puts the `conduit` command on PATH. The npm package name is `conduit-debugger` because `conduit` is already taken on the npm registry. Python is not required.
 
-From a checkout, the same package installs with `pip install .`
+A pip build of the same project is also published as `pip install conduit-debugger`. The hub entry uses the npm command above.
 
 ## Prerequisites
 

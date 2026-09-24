@@ -1,5 +1,5 @@
 {
-  "name": "conduit",
+  "name": "conduit-debugger",
   "version": "0.1.0",
   "type": "module",
   "description": "MCP debugger for radare2, x64dbg, cdb, and Frida. Disassembly, CFG, xrefs, and live debugging over stdio or HTTP.",
